@@ -1,0 +1,123 @@
+.userProfileMainDiv{
+    width: 100%;
+    height: 100svh;
+}
+
+header{
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    border-bottom: 1px solid rgb(205, 202, 202);
+    padding-top:10px;
+    padding-bottom:10px;
+}
+
+header p{
+    font-size: 1.5rem;
+    margin-left:15px;
+    cursor: pointer;
+}
+
+header h1{
+    font-family:Lora;
+    font-size: 1.2rem;
+    margin: auto;
+    color: rgb(79, 79, 79);
+}
+
+.userInfo{
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.userInfo img{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    margin-left: 15px;
+}
+
+.userInfo div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:15px;
+}
+
+.userInfo div button{
+  width: 80%;
+  height: 30px;
+  border: 0;
+  border-radius: 10px;
+  color:rgb(39, 39, 39);
+  font-size: 1.1rem;
+  background-color: rgb(226, 226, 226);
+
+}
+
+.userInfo div h1{
+    font-family: sans-serif;
+    font-weight: lighter;
+    font-size: 1.45rem;
+}
+
+#userBio{
+    margin-top: 20px;
+    margin-left: 15px;
+    width: 70%;
+    font-size: 0.9rem;
+    color: rgb(65, 65, 65);
+    font-family: kanit;
+    font-weight: lighter;
+}
+
+.accountInfo{
+    border-top: 1px solid rgb(175, 175, 175);
+    border-bottom: 1px solid rgb(175, 175, 175);
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    padding: 5px;
+}
+
+.accountInfo div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.accountInfo p{
+    font-family:sans-serif;
+    color: rgb(93, 93, 93);
+    font-size: 0.9rem;
+}
+
+.accountMedia{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2px;
+    margin-top: 10px;
+}
+
+.accountMedia img{
+    width: 100%;
+    height:8rem;
+}
+
+@media (hover:hover){
+    .userInfo div button:hover{
+        background-color: rgb(216, 216, 216);
+        cursor: pointer;
+    }
+
+   .accountMedia img:hover{
+    filter: brightness(85%);
+    cursor: pointer;
+   }
+
+}

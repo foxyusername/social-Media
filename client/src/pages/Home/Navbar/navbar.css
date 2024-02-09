@@ -1,0 +1,97 @@
+.navbarDiv{
+    position:fixed;
+    border-right: 1px solid rgb(165, 165, 165);
+    width: 15%;
+    height: 100svh;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    top: 0;
+    z-index:1000;
+}
+
+.navbarDiv h1{
+    font-family: 'Lobster Two', sans-serif;
+    letter-spacing:0.4rem;
+    font-size:2rem;
+    color: #F93F4D;
+    margin-top: 25px;
+    margin-left: 10px;
+}
+
+.navbarDiv section{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.navbarDiv section div{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    height: 50px;
+    width: 95%;
+}
+
+.navbarDiv section div h3{
+    font-size: 1.7rem;
+    margin-left: 10px;
+}
+
+.navbarDiv section div img{
+    width: 1.7rem;
+    height: 1.7rem;
+    margin-left: 10px;
+    border-radius: 50%;
+}
+
+.navbarDiv section div p{
+    font-family: kanit;
+    font-size: 1rem;
+    color: rgb(62, 62, 62);
+}
+
+.navbarDiv button{
+  width: 80%;
+  height: 2.2rem;
+  font-size: 1.2rem;
+  font-family: kanit;
+  letter-spacing:5px;
+  color: rgb(254, 254, 254);
+  background-color: rgb(251, 23, 23);
+  box-shadow: 2px 2px 7px black;
+  outline: 0;
+  border: 0;
+  border-radius: 10px;
+  margin-left: 10px;
+  cursor: pointer;
+  margin-top: auto;
+  margin-bottom: 80px;
+  transition: all 0.1s ease-in-out;
+}
+
+
+
+
+@media (hover:hover){
+    .navbarDiv section div:hover{
+        background-color: rgba(176, 176, 176, 0.249);
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+    .navbarDiv section div:hover h3{
+        transform: scale(1.1);
+    }
+
+    .navbarDiv section div:hover img{
+        transform: scale(1.1);
+    }
+
+
+    .navbarDiv button:hover{
+        transform:scale(1.02);
+    }
+
+}
+

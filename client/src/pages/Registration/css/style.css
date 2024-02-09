@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --brandColor:#F93F4D;
+}
+
+.mainDiv{
+  width: 100%;
+  height: 100svh;
+  background: linear-gradient(to right,#F93F4D 50%,white 50%);
+  display: flex;
+  justify-content: center;
+}
+
+
+.LuminaHeading{
+    color: #FFF;
+    font-family: Joti One;
+    font-size: 2.3rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.headingDiv{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 90%;
+    height: fit-content;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+
+.logo_img_text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo_img_text img{
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+}
+
+.backOption{
+    display: flex;
+    background-color: rgb(38, 38, 38);
+    border-radius: 10px;
+    padding: 7px;
+    justify-content: space-around;
+    width:110px;
+}
+
+.backOption h3{
+    font-size: 1.5rem;
+    color: white;
+    font-family: Joti One;
+}
+
+.backOption h2{
+    color: white;
+    font-size: 1.5rem;
+    font-family: Joti One;
+}
+
+
+@media only screen and (min-width:1000px){
+
+   .mainDiv{
+    justify-content: first baseline;
+   }
+
+    .headingDiv{
+        display: flex;
+        flex-direction: column;
+        align-items: first baseline;
+        height: 90%;
+        width: 80%;
+        margin-top: 0;
+        padding-top: 10px;
+    }
+
+    .backOption{
+        cursor: pointer;
+    }
+}
+
+@media only screen and (max-width:500px){
+ .headingDiv{
+    display: none;
+ }   
+}
+
+@media only screen and (max-height:300px){
+.headingDiv{
+    display: none;
+}
+
+}

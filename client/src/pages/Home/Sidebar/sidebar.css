@@ -1,0 +1,67 @@
+.sidebarDiv{
+    display: flex;
+    flex-direction: column;
+    width:calc(20%-10px);
+    align-items: first baseline;
+    gap: 30px;
+    width: 20%;
+}
+
+.sidebarDiv h1{
+    font-family: Lora;
+    font-size: 0.8rem;
+    color: rgb(62, 62, 62);
+    letter-spacing: 2px;
+    margin-top: 25px;
+}
+
+.sidebarDiv section {
+    width: 80%;
+}
+
+.sidebarDiv section div{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap:10px;
+    justify-content: space-between;
+}
+
+.sidebarDiv section div img{
+    width:3.5rem;
+    height:3.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.sidebarDiv p{
+    color: rgb(93, 93, 251);
+    font-family: kanit;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+#personInfo{
+width: auto;
+gap: 10px;
+align-items:center;
+}
+
+#personInfo h2{
+    font-size: 1rem;
+    color: rgb(67, 67, 67);
+    font-family: Lora;
+    cursor: pointer;
+}
+
+#personInfo section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 7px;
+}
+
+#personInfo h3{
+    color: grey;
+    font-size: 0.8rem;
+}

@@ -1,0 +1,38 @@
+.noPostsDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.noPostsDiv img{
+    width: 50%;
+    height: 50%;
+}
+
+.noPostsDiv h1{
+    color: black;
+    font-family: sans-serif;
+}
+
+
+
+.postsDiv {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 10px;
+    max-width: 700px;
+    margin-top: 30px;
+}
+
+.postsDiv img{
+width: 5rem;
+}
+
+@media (hover:hover){
+   .postsDiv img:hover{
+    cursor: pointer;
+}
+
+}

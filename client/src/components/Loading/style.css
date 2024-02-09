@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.loadingMainDiv{
+    width: 100%;
+    height: 100svh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.loadingMainDiv h1{
+  color:#000000;
+  font-family: Oswald;
+  font-size: 4.7rem;
+  letter-spacing:0.4cm;
+  text-align: center;
+}
+
+
+.ballsDiv{
+    display: flex;
+    position: relative;
+    width: 100%;
+}
+
+.ballsDiv div{
+    position: absolute;
+    background-color: rgb(18, 18, 18);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    transform: translateX(-50%);
+
+}
+
+.firstBall{
+    left: calc(50% + 80px);
+    animation-name: firstballanimate;
+    animation-duration: 1.2s;
+    animation-iteration-count: infinite;
+}
+
+.secondBall{
+    left: calc(50% - 80px);
+    animation-name: secondballanimate;
+    animation-duration: 1.2s;
+    animation-iteration-count: infinite;
+}
+
+
+@keyframes firstballanimate {
+
+0%{
+    left: calc(50% + 80px);
+}
+
+50%{
+    left: calc(50% - 80px);
+}
+
+100%{
+    left: calc(50% + 80px);
+}
+
+}
+
+
+@keyframes secondballanimate{
+
+    0%{
+        left: calc(50% - 80px);
+    }
+    
+    50%{
+        left: calc(50% + 80px);
+    }
+    
+    100%{
+        left: calc(50% - 80px);
+    }
+
+
+}

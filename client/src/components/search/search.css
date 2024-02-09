@@ -1,0 +1,179 @@
+.searchMainDiv{
+    position: fixed;
+    width: calc(100% - 1.4rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#customLink{
+    text-decoration: none;
+    outline: none;
+    color: rgb(52, 52, 52);
+}
+
+.searchMainDiv h1{
+    display: none;
+}
+
+.searchMainDiv h2{
+    display: none;
+}
+
+.searchedUser{
+    display: flex;
+}
+
+.searchedUser img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid red;
+}
+
+.searchedUser p{
+    font-family: sans-serif;
+}
+
+.inputDiv{
+    width: 100%;
+    height: 60px;
+    gap: 5px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    background-color: white;
+}
+
+.inputDiv input{
+    width: 60%;
+    max-width: 350px;
+    height: 40px;
+    background-color: rgb(241, 241, 241);
+    border: 0;
+    outline: 0;
+    border-radius: 10px;
+    font-size: 1rem;
+    padding-left: 10px;
+    color: rgb(74, 74, 74);
+}
+
+.inputDiv button{
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(82, 82, 82);
+}
+
+.searchMainDiv section{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    background-color: white;
+    overflow-x: hidden;
+    align-self: last baseline;
+    width: 80%;
+    max-width:450px;
+    border-radius: 10px;
+    height: auto;
+    box-shadow: 5px 5px 10px rgb(213, 213, 213);
+}
+
+.searchMainDiv section div{
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.searchMainDiv section div p{
+    margin-top: 7px;
+    font-size: 1.1rem;
+    font-family: sans-serif;
+}
+
+.searchMainDiv section div:nth-child(1){    
+    margin-top: 10px;
+}
+
+.searchMainDiv section div:nth-last-child(1){
+    margin-bottom: 10px;
+}
+
+.searchedUser:hover{
+    background-color: rgb(239, 239, 239);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.errDiv{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#errorMessage{
+    font-size: 1.3rem;
+    font-family: sans-serif;
+    color: rgb(54, 54, 54);
+}
+
+@media only screen and (min-width:750px){
+
+.searchMainDiv h1{
+    display: block;
+    font-family:Kanit;
+    font-weight: lighter;
+    font-size: 1.8rem;
+    color:#F93F4D;
+    letter-spacing: 1px;
+}
+
+.searchMainDiv{
+    width:50%;
+    max-width: 400px;
+    align-items: first baseline;
+    background-color: white;
+    height: 100svh;
+    gap: 20px;
+    padding-left: 10px;
+    padding-top: 10px;
+    border-right:1px solid rgb(192, 192, 192);
+}
+
+.inputDiv{
+    justify-content:left;
+}
+
+.inputDiv input{
+    width: 85%;
+}
+
+.searchMainDiv section{
+    align-self: first baseline;
+    box-shadow: none;
+    width: 100%;
+    border-radius: 0px;
+}
+
+
+.errDiv{
+    justify-content:left;
+}
+
+.errDiv p{
+    margin-left: 5px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+}

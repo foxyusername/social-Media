@@ -1,0 +1,199 @@
+.registerBox{
+    max-width: 500px;
+    width: 100%;
+    height:auto;
+    padding-bottom: 20px;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 25px;
+    box-shadow: 7px 8px 15px 0px rgba(0, 0, 0, 0.96);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.registerBox h1{
+    color: #000;
+    text-align: center;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 2.3rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 10px;
+}
+
+.inputs_btn{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+.inputs_btn div{
+    width: 100%;
+    display: flex;
+    border-bottom: 2px solid black;
+}
+
+.inputs_btn div img{
+    width: 35px;
+    height: 35px;
+}
+
+.passwordInput img{
+    margin-bottom: 4px;
+}
+
+.inputs_btn div input{
+    width: 100%;
+    border: 0;
+    outline: none;
+    font-size:1.3rem;
+    color: #464646;
+    font-weight: 400;
+    padding-left: 5px;
+}
+
+.inputs_btn button{
+   width:65%;
+   height:55px;
+   color: #FFF;
+   text-align: center;
+   font-family: Poppins;
+   font-size: 1.5rem;
+   font-weight: 400;
+   border-radius: 50px;
+   background-color: #F93F4D;
+   color: white;
+   border: 0;
+   cursor: pointer;
+   transition: 0.2s ease-in-out;
+   filter: drop-shadow(5px 5px 10px #FC616D);
+}
+
+.authMethodsDiv{
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.authMethodsDiv img{
+    width:45px;
+    height:45px;
+    cursor: pointer;
+    transition: all 0.1s ease;
+}
+
+.authMethodsDiv h4{
+    color:rgb(40, 40, 40);
+    position: absolute;
+    right: 45px;
+    top: 0;
+    width: 100px;
+    border: 1px solid #F93F4D;
+    border-radius: 10px;
+    text-align: center;
+    padding: 2px;
+}
+
+.authMethodsDiv h4::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left:-20px; /* Changed right: -20px to position the arrow on the right side */
+    transform: translateY(-50%) rotate(180deg); 
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent transparent #F93F4D; 
+}
+
+.authMethodsDiv h3{
+    color: #000;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    cursor: default;
+}
+
+.registerBox p{
+    color: blueviolet;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-top: 20px;
+    display: inline;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.registerBox section{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.registerBox section h3{
+    color: red;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+
+#eye{
+    cursor: pointer;
+}
+
+@media (hover:hover){
+    .authMethodsDiv img:hover{
+        transform: scale(1.1);
+    }
+
+    
+}
+
+
+@media only screen and (min-width:900px){
+    .registerBox{
+        transform: translate(-50%,-50%) scale(0.9);
+    }
+    .inputs_btn div input{
+        font-size:1.1rem;
+    }
+
+    .inputs_btn button{
+        transform: scale(0.9);
+    }
+
+    .registerBox p{
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width:900px){
+    .registerBox{
+        transform: translate(-50%,-50%) scale(0.8);
+    }
+}
+
+@media only screen and (max-height:300px){
+
+    .registerBox{
+        transform:translate(-50%,-50%) scale(0.5);
+    }
+}

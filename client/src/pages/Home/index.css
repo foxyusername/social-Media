@@ -1,0 +1,20 @@
+.mainDiv_centerer{
+    width: 100%;
+    display: flex;
+    justify-content:center;
+}
+
+.mainDiv{
+    width: 95%;
+    min-height: 100svh;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    background:none;
+}
+
+@media only screen and (max-width:700px){
+    .mainDiv{
+        flex-direction: column;
+    }
+}

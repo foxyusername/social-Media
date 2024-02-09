@@ -1,0 +1,130 @@
+.profileDiv_center{
+    display: flex;
+    width: 100%;
+    height: 100svh;
+    justify-content: center;
+}
+
+.profileDiv{
+width: 95%;
+}
+
+
+.profileHeader{
+    display: flex;
+    gap:30px;
+    margin-top: 30px;
+}
+
+.profileHeader div{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+
+.profileHeader div h1{
+font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+font-weight:lighter;
+font-size: 1.5rem;
+color: rgb(43, 43, 43);
+}
+
+.profileHeader div button{
+    width: 70%;
+    min-width: 80px;
+    border: 0;
+    outline: 0;
+    font-family: kanit;
+    background-color: rgb(237, 237, 237);
+    padding: 4px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.profileHeader img{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+}
+
+.profileMainSection {
+    display: flex;
+    flex-direction: column;
+    gap:15px;
+}
+
+#profileBio{
+    font-size: 0.9rem;
+    font-family:Lora;
+    width: 90%;
+    margin-left: 5px;
+    max-width: 550px;
+}
+
+.checkFollowers{
+    display: flex;
+    justify-content: space-around;
+    border-top: 1px solid #F93F4D;
+    border-bottom: 1px solid #F93F4D;
+    margin-top: 30px;
+    padding: 5px;
+    max-width: 730px;
+}
+
+.checkFollowers div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.checkFollowers p{
+    font-family:kanit;
+}
+
+
+
+@media (hover:hover){
+    .profileHeader div button:hover{
+        background-color: rgb(209, 209, 209);
+    }
+}
+
+@media only screen and (min-width:700px){
+    .profileMainSection{
+        margin-left:10%;
+       text-align: center;
+       align-items: center; 
+       padding-right: 10%;
+    }
+
+    .profileHeader img{
+        width: 140px;
+        height: 140px;
+    }
+
+    .profileHeader{
+        gap: 50px;
+    }
+
+    .profileDiv div h1{
+        font-size: 1.7rem;
+    }
+
+   #profileBio{
+    font-size: 1rem;
+   }
+   
+   .checkFollowers {
+    width: 95%;
+   }
+
+}
+
+@media only screen and (min-width:1200px){
+    .profileMainSection{
+    margin-left:20%;
+}
+}

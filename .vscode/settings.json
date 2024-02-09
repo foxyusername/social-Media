@@ -1,0 +1,19 @@
+{
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        "client/vite.config.js": true,
+        "client/.eslintrc.cjs": true,
+        "client/package-lock.json": true,
+        "client/README.md": true
+    },
+    "hide-files.files": [
+        "client/.eslintrc.cjs",
+        "client/package-lock.json",
+        "client/README.md"
+    ]
+}

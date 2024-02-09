@@ -1,0 +1,158 @@
+:root{
+    --btnColor:rgb(41, 131, 248);
+}
+
+
+.profileEditDiv{
+    width: 100%;
+    height: 100svh;
+    display: flex;
+    justify-content: center;
+}
+
+.profileEditMain{
+    width: 95%;
+}
+
+
+.profileEditSection{
+    display: flex;
+    align-items: center;
+   font-size: 1.4rem;
+   flex-direction: column;
+   gap: 30px;
+   max-width: 950px;
+}
+
+.profileEditSection h1{
+    margin-top: 30px;
+   font-family: sans-serif;
+   color: rgb(75, 75, 75);
+   font-size: 1.7rem;
+}
+
+.info_btn{
+    display: flex;
+    background-color: rgb(242, 242, 242);
+    width: 100%;
+    justify-content: space-between;
+    border-radius: 20px;
+    height: 120px;
+}
+
+.info_btn div{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-left: 5px;
+}
+
+.info_btn div img{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+}
+
+.info_btn div h3{
+    font-size: 1.1rem;
+    font-family: Lora;
+    font-weight: lighter;
+}
+
+.info_btn button{
+    width:30%;
+    max-width: 140px;
+    height:40px;
+    background-color:var(--btnColor);
+    color: white;
+    border: 0;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    align-self: center;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.changeBioDiv{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-radius: 10px;
+    gap: 10px;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.changeBioDiv p{
+    font-family: sans-serif;
+    font-size:1.4rem;
+    margin-left: 5px;
+    color:rgb(75, 75, 75);
+    font-weight: bold;
+}
+
+.changeBioDiv textarea{
+    width: 80%;
+    height: 200px;
+    font-size: 1rem;
+    padding: 10px;
+    resize: none;
+    border-radius: 15px;
+    max-width: 700px;
+}
+
+#submitBtn{
+    width:45%;
+    height: 45px;
+    border-radius: 15px;
+    border: 0;
+    background-color:var(--btnColor);
+    color: white;
+    font-family: kanit;
+    font-size: 1.4rem;
+    margin-top: 40px;
+    cursor: pointer;
+}
+
+@media only screen and (min-width:700px){
+    .profileEditSection{
+        margin-left: 10%;
+    }
+
+    .profileEditSection h1{
+        align-self: first baseline;
+    }
+
+    .changeBioDiv{
+     align-items: first baseline; 
+ }
+
+ .changeBioDiv textarea{
+    width: 96%;
+ }
+
+ #submitBtn{
+   max-width: 250px;
+   align-self: first baseline;
+   margin-left: 5px; 
+}
+}
+
+@media only screen and (min-width:1200px){
+    .profileEditSection{
+        margin-left: 18%;
+    }
+}
+
+
+@media (hover:hover){
+
+.info_btn button:hover{
+  background-color: rgb(59, 113, 251);
+}
+
+#submitBtn:hover{
+  background-color:rgb(59, 113, 251);
+}
+
+}
