@@ -43,5 +43,18 @@ if(err){
 
 }
 
+function removeToken(req,res){
 
-export {assignJwtToken,decodeToken};
+  console.log('route has been hit');
+
+    res.clearCookie('accesToken', {
+        httpOnly: true,
+        secure: true,
+        sameSite: 'none'
+      });
+
+    res.send('accesToken cleared');
+}
+
+
+export {assignJwtToken,decodeToken,removeToken};

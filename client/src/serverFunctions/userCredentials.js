@@ -19,3 +19,35 @@ return await axios.post(import.meta.env.VITE_API_URL + '/authenticate/credential
 
 
 }
+
+export async function profileInfo(username){
+
+console.log('username is '+username);
+
+if(username){
+    return await axios.post(import.meta.env.VITE_API_URL + '/receive/profileInfo',{
+        username: username
+     },{
+        withCredentials:true
+     }).catch((err) => alert(err));
+}else{
+
+    return await axios.post(import.meta.env.VITE_API_URL + '/receive/profileInfo',{},{
+        withCredentials:true
+     }).catch((err) => alert(err));
+}
+
+}
+
+export async function commentsInfo(postId){
+
+console.log(postId);
+
+return await axios.post(import.meta.env.VITE_API_URL + '/receive/commentsInfo',{
+    postId:postId
+},{
+    withCredentials:true
+})
+.catch(err => console.log(err));
+
+}

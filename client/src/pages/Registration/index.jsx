@@ -11,7 +11,7 @@ import { useState} from 'react';
 import {useForm} from "react-hook-form";
 import {yupResolver} from "@hookform/resolvers/yup";
 
-import { SignupSchema,LoginSchema } from '../../config/FormValid.js';
+import { SignupSchema,LoginSchema } from '../config/FormValid.js';
 import { SignupUser } from '../../serverFunctions/SignupUser.js';
 import { LoginUser } from '../../serverFunctions/LoginUser.js';
 import Loading from '../../components/Loading/Loading.jsx';

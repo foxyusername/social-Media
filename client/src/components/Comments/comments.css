@@ -1,0 +1,128 @@
+.commentsDivMain{
+position: fixed;
+width:calc(100svw + 100px);
+height: 100svh;
+display: flex;
+justify-content: center;
+align-items: center;
+background-color:rgba(0, 0, 0, 0.358);
+}
+
+.commentsDiv{
+display: flex;
+width: 70%;
+min-width: 750px;
+max-width: 850px;
+height: 70%;
+background-color: white;
+z-index: 10000;
+}
+
+.commentsDiv img{
+width: 50%;
+height: 100%;
+}
+
+.commentsDiv section{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    gap: 20px;
+    overflow-y: auto;
+}
+
+.image_commentInfo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.commentsDiv section div img{
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+.commentInfo{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-family: lora;
+    gap: 5px;
+    width: 70%;
+}
+
+.commentInfo h1{
+    font-size: 0.9rem;
+    font-weight: bolder;
+    margin-left: 5px;
+}
+
+.commentInfo p{
+    font-size: 0.7rem;
+    margin-left: 5px;
+}
+
+.commentInfo h3{
+    border-radius: 20px;
+    background-color: rgb(228, 228, 228);
+    color:rgb(32, 32, 32);
+    font-family: kanit;
+    padding: 5px;
+    font-weight: lighter;
+    font-size: 0.8rem;
+    width: auto;
+    word-wrap: break-word;
+}
+
+.noCommentsDiv{
+    border-left: 1px solid black;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.noCommentsDiv h1{
+    font-family: kanit;
+    font-weight: lighter;
+    color: rgb(73, 73, 73);
+    word-wrap: break-word;
+}
+
+@media only screen and (max-width:900px){
+
+.commentsDiv{
+    flex-direction: column;
+    min-width: auto;
+    width: 60%;
+    gap: 0px;
+    max-width: 350px;
+}
+
+.commentsDiv img{
+    width: 100%;
+    height: 50%;
+}
+
+.commentsDiv section{
+    width: 100%;
+    min-height: calc(50% -10px);
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.noCommentsDiv{
+    margin-left: -30px;
+    position: relative;
+}
+
+.noCommentsDiv h1{
+    font-size: 1rem;
+}
+
+}

@@ -8,3 +8,15 @@ return await axios.get(import.meta.env.VITE_API_URL + '/authenticate',{
 }).catch((error)=> {throw error.response?.data || error.message || 'Unexpected error occurred';});
 
 }
+
+export async function removeAccesToken(){
+
+    let result = await axios.get(import.meta.env.VITE_API_URL + '/authenticate/removeToken',{withCredentials:true})
+    .catch(err => console.log(err));
+    
+    
+    if(result){
+      window.location.reload();
+    }
+    
+    }

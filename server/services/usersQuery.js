@@ -62,3 +62,87 @@ resolve(result.insertId);
 }
 
 }
+
+export function queryContent(clientId){
+    
+return new Promise((resolve,reject)=>{
+
+let query='SELECT content FROM users WHERE id=?';
+
+pool.query(query,[clientId],(err,result)=>{
+
+if(err) reject(err)
+
+resolve(result);
+
+})
+
+})
+}
+
+export function queryAllPostInfo(clientId){
+
+console.log(clientId);
+
+return new Promise((resolve,reject)=>{
+
+let query = `
+SELECT 
+users.profileImg,
+users.username,
+posts.id,
+posts.media,
+posts.createdAt,
+posts.description,
+(SELECT COUNT(postID) FROM likes WHERE postID = posts.id) AS like_count,
+(SELECT GROUP_CONCAT(postID) FROM likes WHERE userID = ?) AS userLiked
+FROM 
+users
+JOIN 
+posts ON posts.userID = users.id
+JOIN 
+followers ON followers.followedID = users.id
+WHERE 
+followers.followerID = ?
+UNION ALL
+SELECT 
+users.profileImg,
+users.username,
+posts.id,
+posts.media,
+posts.createdAt,
+posts.description,
+(SELECT COUNT(postID) FROM likes WHERE postID = posts.id) AS like_count,
+(SELECT GROUP_CONCAT(postID) FROM likes WHERE userID = ? LIMIT 1) AS userLiked
+FROM 
+users
+JOIN 
+posts ON posts.userID = users.id
+WHERE 
+FIND_IN_SET(posts.content, (SELECT REPLACE(content, ' ', '') FROM users WHERE id = ? ))
+AND
+posts.id NOT IN (
+    SELECT 
+        posts.id
+    FROM 
+        users
+    JOIN 
+        posts ON posts.userID = users.id
+    JOIN 
+        followers ON followers.followedID = users.id
+    WHERE 
+        followers.followerID = ?
+)
+LIMIT 10;
+`;
+  
+pool.query(query,[clientId,clientId,clientId,clientId,clientId],(err,result)=>{
+
+if(err) reject(err);
+
+resolve(result);
+})
+
+})
+
+}

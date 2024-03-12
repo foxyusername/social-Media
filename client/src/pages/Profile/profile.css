@@ -10,6 +10,7 @@ width: 95%;
 }
 
 
+
 .profileHeader{
     display: flex;
     gap:30px;
@@ -53,6 +54,23 @@ color: rgb(43, 43, 43);
     display: flex;
     flex-direction: column;
     gap:15px;
+}
+
+#logout{
+    position: absolute;
+    color: rgb(13, 13, 13);
+    border: 2px solid red;
+    outline: 0;
+    border-radius: 20px;
+    font-size: 1.1rem;
+    font-family: kanit;
+    letter-spacing: 2.5px;
+    width: 130px;
+    height: 30px;
+    right: 50px;
+    top: 20px;
+    background-color: white;
+    cursor: pointer;
 }
 
 #profileBio{
@@ -127,4 +145,23 @@ color: rgb(43, 43, 43);
     .profileMainSection{
     margin-left:20%;
 }
+}
+
+@media only screen and (max-width:500px){
+
+#logout{
+    right: 20px;
+    width: 100px;
+}
+
+}
+
+@media (hover:hover){
+    #logout:hover{
+        transition: all 200ms ease;
+        transform: scale(1.1);
+        background-color: red;
+        color: white;
+        box-shadow: 2px 2px 7px rgb(255, 44, 44);
+    }
 }

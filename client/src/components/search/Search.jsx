@@ -2,12 +2,12 @@ import React, { useState,useEffect } from 'react'
 import debounce from "lodash.debounce";
 import "./search.css";
 import axios from "axios";
-import {Link} from 'react-router-dom';
+import {Link, Navigate} from 'react-router-dom';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faXmark,faFaceFrown} from '@fortawesome/free-solid-svg-icons'
 
-function Search({hideNavbar}) {
+function Search({hideSearch}) {
 
 //lodash library is being used to send the request to server whenever the user stops typing input
 //after stopping for 500 miliseconds debounce function executes and calls the sendRequestToServer function
@@ -69,17 +69,19 @@ setInputValue(value);
 
 <div className='inputDiv'>
    <input onChange={inputChanged} type="text" placeholder='Search...'/>
-   <button onClick={hideNavbar}><FontAwesomeIcon icon={faXmark} /></button>
+   <button onClick={hideSearch}><FontAwesomeIcon icon={faXmark} /></button>
 </div>
 
   <section style={{borderTop:array.length>0 || errMessage.length>0 ? "1px solid rgb(164, 164, 164)": 'none'}}>
 
 {array.length>0 && inputValue.length>0 ? array.map((result,index)=>{
 
- return <Link id='customLink' to={'/profile/'+result.username+''}><div key={index} className='searchedUser'>
- <img src={result.profileImg} alt="Searched people profile photos" />
- <p>{result.username}</p>
- </div></Link>
+ return  <Link id='customLink' to={`/profile/${result.username}`}>
+ <div key={index} className='searchedUser'>
+   <img src={result.profileImg} alt="Searched people profile photos" />
+   <p>{result.username}</p>
+ </div>
+</Link>
 }): errMessage.length>0 && <div className='errDiv'>
   
   <p id='errorMessage'>{errMessage} {<FontAwesomeIcon icon={faFaceFrown} /> } </p>

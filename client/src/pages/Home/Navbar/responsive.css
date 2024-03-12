@@ -12,8 +12,9 @@
         align-items: first baseline;
         width: 6%;
     }
+
     .navbarDiv button{
-        display: none;
+      display: none;
     }
 
     .navbarDiv section{

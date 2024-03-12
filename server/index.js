@@ -7,6 +7,7 @@ dotenv.config();
 import { RegisterRouter } from "./routes/Register.js";
 import { validateTokenRouter } from "./routes/authenticate.js";
 import { updateRouter } from "./routes/update.js";
+import { receiveInfo } from "./routes/receiveInfo.js";
 
 let app=express();
 
@@ -20,6 +21,6 @@ app.use(cookieParser());
 app.use('/user',RegisterRouter);
 app.use('/authenticate',validateTokenRouter);
 app.use('/update',updateRouter);
-
+app.use('/receive',receiveInfo);
 
 app.listen(process.env.PORT,()=>{console.log('server is running on port '+process.env.PORT+'')})

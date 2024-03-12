@@ -15,6 +15,7 @@ const Profile=lazy(()=>import('./pages/Profile/Profile.jsx'));
 const NotFound=lazy(()=>import('./pages/404/404.jsx'));
 const ProfileEdit=lazy(()=>import('./pages/ProfileEdit/ProfileEdit.jsx'));
 const UserProfile=lazy(()=>import('./pages/userProfiles/UserProfile.jsx'));
+const CreatePost=lazy(()=>import('./pages/createPosts/CreatePost.jsx'));
 
 function App() {   
 
@@ -45,6 +46,7 @@ let queryClient= new QueryClient();
      <Route path="/profile" element={<Profile />} />
      <Route path="/profile/edit" element={<ProfileEdit />} />
      <Route path="/profile/:username" element={<UserProfile />} />
+     <Route path="/create" element={<CreatePost />} />
      </Route>
 
     </Routes>

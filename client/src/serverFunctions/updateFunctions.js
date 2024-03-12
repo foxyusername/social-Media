@@ -21,3 +21,28 @@ await axios.put(import.meta.env.VITE_API_URL + '/update/profileImg',{
 .catch(err =>alert('something went wrong when connecting with server'))
 
 }
+
+export async function updateFollowStatus(username,refetch){
+   
+await axios.put(import.meta.env.VITE_API_URL + '/update/follow',{
+    username:username
+},{
+    withCredentials:true
+})
+.then(res =>console.log(res))
+.catch(err => console.log(err))
+
+}
+
+export async function updateComments (postId,comment){
+
+return await axios.put(import.meta.env.VITE_API_URL + '/update/comment',{
+    postId:postId,
+    comment:comment
+},{
+    withCredentials:true
+})    
+.then(res => console.log(res))
+.catch(err => console.log(err))
+
+} 

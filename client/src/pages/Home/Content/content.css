@@ -132,6 +132,37 @@ border-radius:50%;
     cursor: pointer;
 }
 
+#likedPost{
+color: red;
+}
+
+#commented{
+    color: red;
+}
+
+.noContentDiv{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100svh;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+.noContentDiv h1{
+ font-size: 1.5rem;
+ color: rgb(62, 62, 62);
+ font-family: kanit;
+ text-align: center;
+ width: 70%;
+ max-width: 500px;
+}
+
+.noContentDiv img{
+    width: 50%;
+    max-width: 300px;
+}
 
 
 @media (hover:hover){

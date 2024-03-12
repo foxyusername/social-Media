@@ -1,24 +1,50 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import "./navbar.css";
 import "./responsive.css";
-import {useNavigate} from 'react-router-dom';
+import {useNavigate,Navigate} from 'react-router-dom';
 import { useState } from 'react'
+import axios from 'axios';
+
 import  Search from '../../../components/search/Search.jsx';
+import Content from '../../../components/ContentBox/Content.jsx';
+import { removeAccesToken } from '../../../serverFunctions/checkToken.js';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faHome,faSearch} from '@fortawesome/free-solid-svg-icons'
 import {faHeart,faCircleUser,faSquarePlus,faImage} from "@fortawesome/free-regular-svg-icons"
 
 
-function Navbar() {
+function Navbar({refetch}) {
 
 const [showNavbar,setShowNavbar]=useState(true);
+const [showContent,setShowContent]=useState(false);
+const [showSearch,setShowSearch]=useState(false);
 
 let history=useNavigate();
 
-
-function hideNavbar(){
+function showNavbarFunction(){
   setShowNavbar(true);
+  setShowContent(false);
+  setShowSearch(false);
+
+  refetch();
+}
+
+function showNavbarFunction2(){
+  setShowNavbar(true);
+  setShowContent(false);
+  setShowSearch(false);
+
+}
+
+function contentClicked(){
+  setShowNavbar(false);
+  setShowContent(true);
+}
+
+function searchClicked(){
+setShowNavbar(false);
+setShowSearch(true);
 }
 
 if(showNavbar){
@@ -35,21 +61,14 @@ return <div className='navbarDiv'>
 
 </div>
 
-<div onClick={()=>{setShowNavbar(false)}}>
+<div onClick={searchClicked}>
 
 <h3>{<FontAwesomeIcon icon={faSearch} />}</h3>
 <p>Search</p>
 
 </div>
 
-<div>
-
-<h3>{<FontAwesomeIcon icon={faHeart} />}</h3>
-<p>Notifications</p>
-
-</div>
-
-<div>
+<div onClick={()=>{history('/create')}}>
 
 <h3>{<FontAwesomeIcon icon={faSquarePlus} />}</h3>
 <p>Create</p>
@@ -57,7 +76,7 @@ return <div className='navbarDiv'>
 </div>
 
 
-<div>
+<div onClick={contentClicked}>
 
 <h3>{<FontAwesomeIcon icon={faImage} />}</h3>
 <p>content</p>
@@ -75,11 +94,13 @@ return <div className='navbarDiv'>
 
   </section>
 
-  <button>LOGOUT</button>
+  <button onClick={removeAccesToken}>LOGOUT</button>
 
   </div>
+}else if(showContent){
+  return <Content hideContent={showNavbarFunction} />
 }else{
-  return <Search hideNavbar={hideNavbar}/>
+return <Search hideSearch={showNavbarFunction2}/>
 }
 
 }
