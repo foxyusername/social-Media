@@ -11,6 +11,7 @@ withCredentials:true
     history('/home');
     ""
 }).catch((err)=>{
+    console.log(err);
     alert('something went wrong');
     ""
 })

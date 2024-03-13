@@ -8,6 +8,8 @@
 @media only screen and (max-width:700px){
     .contentDiv{
     margin-left: 0px;
+    height: auto;
+    min-height: calc(100% + 60px);
     }
 
  #postPhoto{

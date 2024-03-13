@@ -4,6 +4,8 @@
     flex-direction: column;
     align-items: center;
     margin-left: 15%;
+    height: auto;
+    min-height: calc(100% + 20px);
 }
 
 .contentDiv section{

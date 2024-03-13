@@ -17,4 +17,5 @@
 .NotFoundDiv p{
     font-family: sans-serif;
     color: rgb(44, 44, 44);
+    text-align: center;
 }
