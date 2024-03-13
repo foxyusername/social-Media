@@ -3,7 +3,7 @@ import {BrowserRouter as Router,Routes,Route} from "react-router-dom"
 import {lazy,Suspense} from "react"
 import {QueryClientProvider,QueryClient} from "react-query"
 
-import ProtectedRoute from "./validation/protectedRoute.jsx";
+import ProtectedRoute from "./validation/ProtectedRoute.jsx";
 import ProtectedRouteHome from "./validation/ProtectedRoute(2).jsx";
 
 //importing the main pages with dynamic lazy function

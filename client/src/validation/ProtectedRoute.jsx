@@ -26,4 +26,4 @@ if (isError) return <div style={{width:'100%',height:'100svh',display:'flex',jus
 
 }
 
-export default ProtectedRoute
+export default ProtectedRoute;

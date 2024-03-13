@@ -25,7 +25,9 @@ app.use('/receive',receiveInfo);
 
 
 try{
+
 app.listen(process.env.PORT,()=>{console.log('server is running on port '+process.env.PORT+'')})
+
 }catch(err){
  console.log('error is ', err);
 }
