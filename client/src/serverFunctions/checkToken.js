@@ -12,7 +12,7 @@ return await axios.get(import.meta.env.VITE_API_URL + '/authenticate',{
 export async function removeAccesToken(){
 
     let result = await axios.get(import.meta.env.VITE_API_URL + '/authenticate/removeToken',{withCredentials:true})
-    .catch(err => ""
+    .catch(err => "")
     
     
     if(result){

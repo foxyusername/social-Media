@@ -48,6 +48,6 @@ return await axios.post(import.meta.env.VITE_API_URL + '/receive/commentsInfo',{
 },{
     withCredentials:true
 })
-.catch(err => ""
+.catch(err => "")
 
 }

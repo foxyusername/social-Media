@@ -21,7 +21,7 @@ const {data,isLoading,isError} = useQuery('userSuggestion',serverRequest,{
 async function serverRequest(){
 
 return await axios.get(import.meta.env.VITE_API_URL + '/receive/userSuggestions',{withCredentials:true})
-       .catch(err => ""
+       .catch(err => "")
 
 }
 

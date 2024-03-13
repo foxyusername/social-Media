@@ -34,7 +34,6 @@ function Content({newQuery}) {
  return await axios.get(import.meta.env.VITE_API_URL + '/receive/allPostInfo',{
   withCredentials:true
  })
- .catch(err => ""
 
 }
 
@@ -49,8 +48,6 @@ axios.put(import.meta.env.VITE_API_URL + '/update/likes',{
 refetch();
 
 })
-.catch(err => ""
-
 }
 
 function checkLiked(id){

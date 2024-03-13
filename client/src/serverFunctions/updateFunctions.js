@@ -29,8 +29,8 @@ await axios.put(import.meta.env.VITE_API_URL + '/update/follow',{
 },{
     withCredentials:true
 })
-.then(res =>""
-.catch(err => ""
+.then(res =>"")
+.catch(err => "")
 
 }
 
@@ -42,7 +42,7 @@ return await axios.put(import.meta.env.VITE_API_URL + '/update/comment',{
 },{
     withCredentials:true
 })    
-.then(res => ""
-.catch(err => ""
+.then(res => "")
+.catch(err => "")
 
 } 

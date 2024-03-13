@@ -39,7 +39,7 @@ if(done === true){
 
 async function selectContent(){
     return await axios.get(import.meta.env.VITE_API_URL + '/receive/contentInfo',{withCredentials:true})
-    .catch(err => ""
+    .catch(err => "")
 }
 
 function handleBtnClick(index) {

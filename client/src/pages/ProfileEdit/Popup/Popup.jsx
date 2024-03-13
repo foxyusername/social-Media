@@ -33,7 +33,7 @@ let publicId='Lumina/' + currentProfileImg.split('/').pop().split('.')[0];
 let deleteResponse=await axios.put(import.meta.env.VITE_API_URL + '/update/deleteProfileImg',{
  publicId: publicId
 })
-.catch(err => ""
+.catch(err => "")
 
 
 let formData=new FormData();

@@ -26,7 +26,6 @@ const {data,isLoading,isError}=useQuery(['profileInfoQuery',username],async ()=>
   enabled:true,
   onSuccess:(data)=>{
     data.data !==null && setIsFollowed(data.data[2].followingStatus)},
-  onError:(err)=>{""
 });
 
 if (isLoading) return <Loading />
