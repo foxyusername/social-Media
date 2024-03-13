@@ -21,13 +21,13 @@ const {data,isLoading,isError} = useQuery('userSuggestion',serverRequest,{
 async function serverRequest(){
 
 return await axios.get(import.meta.env.VITE_API_URL + '/receive/userSuggestions',{withCredentials:true})
-       .catch(err => console.log(err))
+       .catch(err => ""
 
 }
 
 if (isLoading) return <h1>Loading...</h1>
 
-if (isError) console.log(isError);
+if (isError) ""
 
  if (data) return <div className="sidebarDiv">
 

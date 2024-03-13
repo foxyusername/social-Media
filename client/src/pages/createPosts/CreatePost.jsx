@@ -34,8 +34,6 @@ formData.append('folder','Lumina/postsMedia');
 let result=await axios.post('https://api.cloudinary.com/v1_1/'+import.meta.env.VITE_CLOUDINARY_NAME+'/image/upload',formData)
 .catch(err=> alert(err));
 
-console.log(result)
-
 //now its time to insert the returned url inside of result in database 
 axios.put(import.meta.env.VITE_API_URL + '/update/createPost',{
   description:description,

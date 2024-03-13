@@ -22,7 +22,7 @@ return await axios.post(import.meta.env.VITE_API_URL + '/authenticate/credential
 
 export async function profileInfo(username){
 
-console.log('username is '+username);
+""
 
 if(username){
     return await axios.post(import.meta.env.VITE_API_URL + '/receive/profileInfo',{
@@ -41,13 +41,13 @@ if(username){
 
 export async function commentsInfo(postId){
 
-console.log(postId);
+""
 
 return await axios.post(import.meta.env.VITE_API_URL + '/receive/commentsInfo',{
     postId:postId
 },{
     withCredentials:true
 })
-.catch(err => console.log(err));
+.catch(err => ""
 
 }

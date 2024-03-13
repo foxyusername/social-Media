@@ -9,10 +9,10 @@ axios.post(import.meta.env.VITE_API_URL + '/user/login',{
 withCredentials:true
 }).then((res)=>{
     history('/home');
-    console.log(res);
+    ""
 }).catch((err)=>{
     alert('something went wrong');
-    console.log(err);
+    ""
 })
 
 }

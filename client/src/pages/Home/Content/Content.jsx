@@ -25,7 +25,7 @@ function Content({newQuery}) {
     enabled:true,
     onSuccess:(data)=>{
    setArray(data.data.result);
-   //console.log(data);
+   //""
     }
   })
 
@@ -34,7 +34,7 @@ function Content({newQuery}) {
  return await axios.get(import.meta.env.VITE_API_URL + '/receive/allPostInfo',{
   withCredentials:true
  })
- .catch(err => console.log(err));
+ .catch(err => ""
 
 }
 
@@ -49,7 +49,7 @@ axios.put(import.meta.env.VITE_API_URL + '/update/likes',{
 refetch();
 
 })
-.catch(err => console.log(err));
+.catch(err => ""
 
 }
 

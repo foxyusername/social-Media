@@ -18,9 +18,9 @@ const {data,isLoading,isError}=useQuery('selectContent',selectContent,{
     enabled:true,
     onSuccess:(data)=>{
 
- // console.log('content is: ',data.data.result[0].content);
+ // ""('content is: ',data.data.result[0].content);
       
-console.log(data);
+""
     let dataArray=data.data.result[0].content.split(',');
     const indexes = dataArray.map(value => array.indexOf(value));
 
@@ -39,7 +39,7 @@ if(done === true){
 
 async function selectContent(){
     return await axios.get(import.meta.env.VITE_API_URL + '/receive/contentInfo',{withCredentials:true})
-    .catch(err => console.log(err));
+    .catch(err => ""
 }
 
 function handleBtnClick(index) {
@@ -90,7 +90,7 @@ function connectServer(){
 
 if(selectedBtn.length > 0 && detectArrayChange() === 'changed' && done === false){
 
-console.log('request sent');
+""
 
 let contentResult= selectedBtn.map(index => array[index]);
 

@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const LoginUser=(data,setRegisterSuccess,history,setCorrectPassword)=>{
-    console.log(data);
+    ""
 
     setRegisterSuccess({});
     setCorrectPassword('');
@@ -13,7 +13,7 @@ axios.post(import.meta.env.VITE_API_URL + '/user/login',{
     withCredentials:true
 })
 .then(res => {
-    console.log(res);
+    ""
     history('/home');
 })
 .catch(err => {

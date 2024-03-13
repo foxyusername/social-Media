@@ -2,7 +2,7 @@ import axios from 'axios';
 
 export const SignupUser=(data,setRegisterSucces,history)=>{
 
-console.log(data);
+""
 
 //make request to server and send email,username,password with axios post request
 //if response will be positive then navigate user to home route
@@ -17,11 +17,11 @@ axios.post(api_url+'/user/signup',{
 },{
     withCredentials:true
 }).then((res)=>{
-  console.log(res);
+  ""
   history('/home');
 }).catch((err)=>{
 
-console.log(err)
+""
 setRegisterSucces({message:err.response.data.message,status:0});
 
 })

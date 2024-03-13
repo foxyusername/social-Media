@@ -29,7 +29,7 @@ let requestValue=await axios.post(import.meta.env.VITE_API_URL + '/user/informat
 if(err.response.data.status===0){
   setErrMessage(err.response.data.message);
   setArray([]);
-  console.log(errMessage);
+  ""
 }
 
 });
