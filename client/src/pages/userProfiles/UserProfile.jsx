@@ -1,4 +1,4 @@
-import "./UserProfile.css";
+import "./userProfile.css";
 import "./userResponsive.css";
 import React, { useEffect } from 'react';
 import { useParams,Link, useSearchParams } from 'react-router-dom';
