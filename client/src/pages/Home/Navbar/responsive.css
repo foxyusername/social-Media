@@ -61,6 +61,8 @@
 .navbarDiv section{
 margin-top: 0;
 flex-direction: row;
+width: 80%;
+max-width:450px;
 }
 
 .navbarDiv section div h3{
