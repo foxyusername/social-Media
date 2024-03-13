@@ -1,6 +1,6 @@
 import "./app.css";
 import {BrowserRouter as Router,Routes,Route} from "react-router-dom"
-import {lazy,Suspense} from "react"
+import {lazy,Suspense, useEffect} from "react"
 import {QueryClientProvider,QueryClient} from "react-query"
 
 import ProtectedRoute from "./validation/ProtectedRoute.jsx";
@@ -17,7 +17,7 @@ const ProfileEdit=lazy(()=>import('./pages/ProfileEdit/ProfileEdit.jsx'));
 const UserProfile=lazy(()=>import('./pages/userProfiles/UserProfile.jsx'));
 const CreatePost=lazy(()=>import('./pages/createPosts/CreatePost.jsx'));
 
-function App() {   
+function App() {  
 
 let queryClient= new QueryClient();
 

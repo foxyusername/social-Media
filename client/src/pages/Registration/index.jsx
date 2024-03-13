@@ -23,7 +23,19 @@ import {signUpUser} from "../../serverFunctions/demoAccount.js";
 //if page prop hasn't been defined yet then just return the loading page.
 //functionts that send user credentials to backend should also be alternated based on what page is user looking for
 
-function Index({page}) {
+function Index({page}) {   
+
+
+useEffect(()=>{
+
+console.log('execute');
+
+   if (!localStorage.getItem('LuminaAlert')){
+    alert('⚠️This website uses "Cross-Website Tracking" in order to avoid any possible errors or breaks please consider to allow "Cross-Website Tracking" in you browser settings')
+    localStorage.setItem('LuminaAlert','true'); 
+}
+    
+},[])
 
 let [showPassword,setShowPassword]=useState(false);
 let [showPseudoElement,setShowPsudoElement]=useState(false);
