@@ -10,7 +10,8 @@ console.log(id);
 const accesToken=jwt.sign({id,username},process.env.SECRET_KEY);
 
 res.cookie('accesToken',accesToken,{
-    httpOnly:true
+    httpOnly:true,
+    secure:true
 })
 
 res.status(200).json({message: "user registered succesfully", success: 1})
