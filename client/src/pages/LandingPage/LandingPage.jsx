@@ -23,7 +23,9 @@ let aboutRef=useRef();
  <div>
     <h1>Sent Succesfully</h1>
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Flat_tick_icon.svg/2048px-Flat_tick_icon.svg.png" alt="tick icon" />
-    <button onClick={()=>{setBtnClicked(false)}}>OK</button>
+    <button onClick={()=>{
+        setInputValue('');
+        setBtnClicked(false)}}>OK</button>
  </div>
 </div>
 }
@@ -76,7 +78,7 @@ let aboutRef=useRef();
 <div className='textarea_pTag'>
  <div className='textarea_btn'>
 
- <textarea placeholder='Type your feedback here...' onChange={(e)=>{setInputValue(e.target.value)}}></textarea>
+ <textarea value={inputValue} placeholder='Type your feedback here...' onChange={(e)=>{setInputValue(e.target.value)}}></textarea>
 
  {inputValue.length > 0 && <button onClick={()=>{setBtnClicked(true)}}>Send</button>}
 

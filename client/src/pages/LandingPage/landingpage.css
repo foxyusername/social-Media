@@ -19,6 +19,7 @@ header{
     align-items: center;
     justify-content: space-between;
     border-bottom: 1px solid rgb(204, 203, 203);
+    padding: 10px;
 }
 
 header .pageLinks{
@@ -30,12 +31,15 @@ header h1{
     font-family:'Lobster Two', sans-serif;
     color: #F93F4D;
     letter-spacing:0.4rem;
-    font-size:2.3rem;
+    font-size:2.2rem;
+    display: none;
 }
 
 header .loginLinks{
 display: flex;
 gap: 15px;
+align-items: center;
+margin: auto;
 }
 
 header .loginLinks button:nth-child(1){
@@ -175,7 +179,7 @@ letter-spacing: 3px;
  border-radius: 15px;
  border: 1px solid black;
  outline: none;
- padding: 5px;
+ padding: 10px;
  font-size: 1rem;
  color: rgb(41, 41, 41);
  font-family: kanit;
@@ -236,15 +240,20 @@ letter-spacing: 3px;
     font-family: kanit;
     font-weight: lighter;
     text-align: center;
+    font-size: 1.5rem;
 }
 
 .checkmarkDiv div button{
-    width: 50%;
-    height: 30px;
+    width:80%;
+    height: 35px;
     font-size: 1rem;
+    border-radius: 0px;
+    border: 1px solid black;
 }
 
 
 .checkmarkDiv img{
     width: 40%;
+    height: 120px;
+    min-width: 120px;
 }
