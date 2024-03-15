@@ -1,0 +1,4 @@
+
+1) database: sqlfreedatabase  -> using phpmyadmin to controll the database
+2) backend: Render
+3) frontend: Netlify

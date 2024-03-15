@@ -17,6 +17,7 @@ function Content({newQuery}) {
   let [commentArray,setCommentArray]=useState([]);
   let [showComments,setShowComments]=useState(0);
   let [array,setArray]=useState([]);
+  let [userLiked,setUserLiked]=useState([]);
   let [imageUrl,setImageUrl]=useState('');
 
   const {data,isLoading,isError,refetch}=useQuery(['fetchAllPostInfo',newQuery],fetchData,{
@@ -24,7 +25,14 @@ function Content({newQuery}) {
     retry: 0,
     enabled:true,
     onSuccess:(data)=>{
+      console.log(data);
    setArray(data.data.result);
+
+   if(data.data.result[0].userLiked === null){
+    setUserLiked([]);
+   }else{
+    setUserLiked(data.data.result[0].userLiked.split(','));
+  }
    //""
     }
   })
@@ -38,22 +46,39 @@ function Content({newQuery}) {
 }
 
 function likePost(postId){
- 
+
+let likedArray=[...userLiked];  
+let postID=postId.toString();
+
+if(likedArray.includes(postID)){
+
+ likedArray = likedArray.filter(item => item !== postID);
+
+setUserLiked(likedArray);
+
+}else{
+
+likedArray.push(postID);
+
+setUserLiked(likedArray);
+
+}
+
 axios.put(import.meta.env.VITE_API_URL + '/update/likes',{
   postId:postId
 },{
   withCredentials:true
 })
 .then(res => {
-refetch();
+//refetch();
 
 })
 }
 
 function checkLiked(id){
 
-if(array[0].userLiked !== null){
- let likedPosts = array[0].userLiked.split(',');
+if(userLiked !== null){
+ let likedPosts = [...userLiked];
  let postId= id.toString();
 
 if(likedPosts.includes(postId)){
