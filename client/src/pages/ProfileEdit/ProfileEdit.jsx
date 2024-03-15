@@ -66,7 +66,7 @@ if(data){
 return <div className='profileEditDiv'>
 
 <div className='profileEditMain'>
-<Navbar />
+<header><Navbar /></header>
 
 <section className='profileEditSection'>
 

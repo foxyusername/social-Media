@@ -80,7 +80,7 @@
     border-radius: 10px;
     gap: 10px;
     align-items: center;
-    margin-top:-40px;
+    margin-top:-10px;
 }
 
 .changeBioDiv p{
@@ -113,6 +113,10 @@
     cursor: pointer;
 }
 
+header{
+    display: none;
+}
+
 @media only screen and (min-width:700px){
     .profileEditSection{
         margin-left: 10%;
@@ -120,12 +124,13 @@
 
     .profileEditSection h1{
         align-self: first baseline;
-        margin-top: 10px;
     }
 
     .changeBioDiv{
      align-items: first baseline; 
- }
+     margin-top: 10px;
+
+    }
 
  .changeBioDiv textarea{
     width: 96%;
