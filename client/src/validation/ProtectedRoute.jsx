@@ -2,6 +2,7 @@ import React from 'react'
 import { Navigate,Outlet } from 'react-router-dom'
 import { useQuery } from 'react-query'
 import { checkToken } from '../serverFunctions/checkToken.js'
+import Loading from '../components/Loading/Loading.jsx';
 
 function ProtectedRoute() {
   
@@ -10,9 +11,7 @@ const {data,isLoading,isError}=useQuery('checkToken',checkToken,{
     retry: 0,
 });
 
-if(isLoading) return <div style={{width:'100%',height:'100svh',display:'flex',justifyContent:'center',alignItems:'center'}}>
-<h1 style={{fontSize:'50px'}}>Loading...</h1>
-</div>
+if(isLoading) return <Loading />
 
 if(data.data.status === 1){
     return <Navigate to='/home' />
