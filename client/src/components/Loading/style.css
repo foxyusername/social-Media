@@ -13,7 +13,7 @@
     gap: 50px;
 }
 
-header{
+.loadingHeader{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -21,15 +21,15 @@ header{
     gap: 30px;
 }
 
-header h1{
+.loadingHeader h1{
   color:#000000;
+  letter-spacing: 0.4cm;
   font-family: Oswald;
   font-size: 4.7rem;
-  letter-spacing:0.4cm;
   text-align: center;
 }
 
-header p{
+.loadingHeader p{
     text-align: center;
     width: 90%;
 }
