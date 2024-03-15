@@ -54,11 +54,39 @@ if(likedArray.includes(postID)){
 
  likedArray = likedArray.filter(item => item !== postID);
 
+for(let i=0;i<array.length;i++){
+
+if(array[i].id === postId){
+
+let newArray = [...array];
+
+newArray[i].like_count-=1
+
+setArray(newArray);
+
+}
+
+}
+
 setUserLiked(likedArray);
 
 }else{
 
 likedArray.push(postID);
+
+for(let i=0;i<array.length;i++){
+
+  if(array[i].id === postId){
+  
+  let newArray = [...array];
+  
+  newArray[i].like_count+=1
+  
+  setArray(newArray);
+  
+  }
+  
+  }
 
 setUserLiked(likedArray);
 
