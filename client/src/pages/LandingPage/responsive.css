@@ -1,0 +1,89 @@
+@media only screen and (min-width:700px){
+
+.landingPage section{
+
+gap: 40px;
+margin-top: 120px;
+
+}
+
+.img_pTag{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.img_pTag img{
+    width: 40%;
+}
+
+.img_pTag p{
+    width: 60%;
+}
+
+.textarea_btn{
+    order: 2;
+    display: flex;
+    width: 60%;
+    gap: 20px;
+    align-items: center;
+   flex-direction: column;
+}
+
+.textarea_btn button{
+    margin-bottom: -50px;
+}
+
+.textarea_pTag{
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+    align-items: center;
+}
+
+.textarea_pTag p{
+    width: 40%;
+    order: 1;
+}
+
+.feedbackPage{
+ margin-bottom: 80px;
+}
+
+}
+
+@media only screen and (min-width:900px){
+
+header .pageLinks{
+    display: flex;
+    gap: 20px;
+    font-weight: bolder;
+    font-family: sans-serif;
+}    
+
+.heroPage{
+    text-align: left;
+    align-items: flex-start;
+    padding-left: 15px;
+}
+
+.heroPage h1{
+    width: 40%;
+
+}
+
+.heroPage p{
+    width: 40%;
+
+}
+
+}
+
+@media (hover:hover){
+    .pageLinks p:hover{
+     transition: 0.2s;
+     transform: scale(1.1);
+     color:#F93F4D;
+     cursor: pointer;
+    }
+}

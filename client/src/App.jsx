@@ -16,6 +16,7 @@ const NotFound=lazy(()=>import('./pages/404/404.jsx'));
 const ProfileEdit=lazy(()=>import('./pages/ProfileEdit/ProfileEdit.jsx'));
 const UserProfile=lazy(()=>import('./pages/userProfiles/UserProfile.jsx'));
 const CreatePost=lazy(()=>import('./pages/createPosts/CreatePost.jsx'));
+const LandingPage=lazy(()=>import('./pages/LandingPage/LandingPage.jsx'));
 
 function App() {  
 
@@ -30,6 +31,8 @@ let queryClient= new QueryClient();
    
    <Router>
     <Routes>
+
+  <Route path="/" element={<LandingPage />} />
 
      <Route path="*" element={<NotFound />} />
 

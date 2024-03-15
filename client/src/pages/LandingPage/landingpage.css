@@ -1,0 +1,250 @@
+html{
+    scroll-behavior: smooth;
+}
+
+.landingPage{
+    width: 95svw;
+    min-height: 100svh;
+    height: auto;
+    margin: 0 auto;
+    max-width: 900px;
+}
+
+.landingPage button{
+    cursor: pointer;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(204, 203, 203);
+}
+
+header .pageLinks{
+    display: none;
+}
+
+header h1{
+    padding: 10px;
+    font-family:'Lobster Two', sans-serif;
+    color: #F93F4D;
+    letter-spacing:0.4rem;
+    font-size:2.3rem;
+}
+
+header .loginLinks{
+display: flex;
+gap: 15px;
+}
+
+header .loginLinks button:nth-child(1){
+    border: 0;
+    outline: 0;
+    background-color: white;
+    font-size:1rem;
+    font-family: kanit;
+}
+
+header .loginLinks button:nth-child(2){
+  background-color: black;
+  width: 5rem;
+  height: 2rem;
+  color: white;
+  font-family: kanit;
+  font-size: 1rem;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px black;
+}
+
+.heroPage{
+    margin-top: 20px;
+    background-image: url('https://i.pinimg.com/564x/94/2a/0f/942a0f145e3173a67dd926860fd95862.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap:20px;
+    min-height: 500px;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.heroPage h1{
+    color: rgb(3, 3, 3);
+    width: 80%;
+    font-family:Lora;
+    font-weight: bold;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    margin-top:-100px;
+}
+
+.heroPage p{
+width: 60%;
+font-size: 0.9rem;
+border-radius: 15px;
+font-family: Lora;
+font-weight: bolder;
+}
+
+.heroPage button{
+    background-color: #F93F4D;
+  width: 10rem;
+  height: 2rem;
+  color: white;
+  font-family: kanit;
+  font-size: 1rem;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px #F93F4D;
+}
+
+.aboutPage{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.aboutPage h1{
+font-size: 2.5rem;
+font-family: sans-serif;
+letter-spacing: 3px;
+}
+
+.aboutPage p{
+    width: 90%;
+    text-align: left;
+    font-size: 1.1rem;
+    font-family: Lora;
+    color: rgb(73, 72, 72);
+}
+
+.aboutPage img{
+    display: block;
+    width: 100%;
+}
+
+.img_pTag{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.feedbackPage{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.textarea_pTag{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.textarea_btn{
+    width: 100%;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    gap: 30px;
+}
+
+.feedbackPage h1{
+    font-size: 2.5rem;
+font-family: sans-serif;
+letter-spacing: 3px;
+}
+
+.feedbackPage textarea{
+ resize: none;
+ width: 90%;
+ height: 300px;
+ max-width: 500px;
+ border-radius: 15px;
+ border: 1px solid black;
+ outline: none;
+ padding: 5px;
+ font-size: 1rem;
+ color: rgb(41, 41, 41);
+ font-family: kanit;
+}
+
+.feedbackPage textarea::placeholder{
+    text-align: center;
+}
+
+.feedbackPage button{
+    background-color: #F93F4D;
+    width: 60%;
+    max-width: 330px;
+    height: 2.5rem;
+    color: white;
+    font-family: kanit;
+    font-size: 1.3rem;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px #F93F4D;
+}
+
+.feedbackPage p{
+    width: 80%;
+    text-align: left;
+    font-size: 1.1rem;
+    font-family: Lora;
+    color: rgb(73, 72, 72);
+}
+
+.checkmarkDiv{
+ position: fixed;
+ left: 0;
+ width: 100svw;
+ height: 100svh;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ background-color: rgba(0, 0, 0, 0.375);
+}
+
+.checkmarkDiv div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+    width: 50%;
+    height: 40%;
+    max-width: 300px;
+    max-height: 250px;
+    border: 1px solid black;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 3px 3px 7px rgb(38, 38, 38);
+}
+
+.checkmarkDiv div h1{
+    font-family: kanit;
+    font-weight: lighter;
+    text-align: center;
+}
+
+.checkmarkDiv div button{
+    width: 50%;
+    height: 30px;
+    font-size: 1rem;
+}
+
+
+.checkmarkDiv img{
+    width: 40%;
+}
