@@ -134,7 +134,6 @@ let clientId=await decodeToken(req);
 
 let result=await queryAllPostInfo(clientId.id);
 
-console.log(result);
 
 res.status(200).json({result,message:'queryed all information correctly',status:1});
 
@@ -173,7 +172,6 @@ let clientId = await decodeToken(req);
 
 let result= await queryUsers(clientId.id);
 
-console.log(result);
 
 res.status(200).json({result:result,message:'queryed information succesfully',status:1});
 
