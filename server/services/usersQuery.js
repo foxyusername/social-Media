@@ -11,7 +11,7 @@ export function queryUsersInfo (username){
 
 return new Promise ((resolve,reject)=>{
 
-let query='SELECT id,password,username FROM users WHERE username="'+username+'"'
+let query="SELECT id,password,username FROM users WHERE username='"+username+"'"
 
 pool.query(query,(err,result)=>{
 if(err){

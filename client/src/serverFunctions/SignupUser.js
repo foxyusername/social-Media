@@ -3,7 +3,6 @@ import axios from 'axios';
 export const SignupUser=(data,setRegisterSucces,history)=>{
 
 ""
-
 //make request to server and send email,username,password with axios post request
 //if response will be positive then navigate user to home route
 //if response will be negative then return "{message:err.response.data.message,status:0}"
